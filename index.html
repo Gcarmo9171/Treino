@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-frame-refused-watch=""><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Treino – Raphael Ishii Zamataro</title>
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--text:#16181d;--muted:#5b6270;--accent:#d62828;--line:#e3e6ea;--btn:#d62828;--btntext:#fff;color-scheme:light dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101216;--card:#1a1d23;--text:#f1f2f4;--muted:#a0a7b4;--line:#2a2e36}}
+:root[data-theme="dark"]{--bg:#101216;--card:#1a1d23;--text:#f1f2f4;--muted:#a0a7b4;--line:#2a2e36}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.45}
+main{max-width:640px;margin:0 auto;padding:20px 16px 40px}
+h1{font-size:1.5rem;margin:8px 0 4px}
+.sub{color:var(--muted);margin:0 0 6px}
+.hint{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:.92rem;color:var(--muted);margin:16px 0}
+.stick{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);z-index:5;padding:4px 0 6px}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding:4px 0 6px}
+.tabs button{flex:0 0 auto;border:1px solid var(--line);background:var(--card);color:var(--text);padding:8px 14px;border-radius:999px;font-size:.9rem;font-weight:600}
+.tabs button.on{background:var(--accent);border-color:var(--accent);color:#fff}
+h2{font-size:1.05rem;margin:22px 0 4px;scroll-margin-top:70px}
+.focus{color:var(--muted);font-size:.85rem;margin:0 0 10px;text-transform:uppercase;letter-spacing:.04em}
+.ex{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:10px}
+.ex b{display:block;font-size:1.02rem}
+.ex p{margin:4px 0 10px;color:var(--muted);font-size:.93rem}
+.go{text-decoration:none}
+.soon{display:inline-block;color:var(--muted);font-size:.8rem;border:1px dashed var(--line);padding:5px 12px;border-radius:999px}
+.own{margin-top:8px}
+.own input{width:100%;padding:10px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--text);font-size:.9rem}
+.own .row{display:flex;gap:8px}
+.own button,.alt{border:0;border-radius:10px;padding:10px 14px;font-weight:700;font-size:.88rem;background:var(--accent);color:#fff}
+.alt{background:transparent;color:var(--muted);border:1px solid var(--line);margin-top:8px;padding:6px 10px;font-weight:600;font-size:.8rem}
+.msg{font-size:.8rem;color:var(--accent);margin-top:4px}
+.bar{background:var(--card);border:1px dashed var(--accent);border-radius:12px;padding:10px 14px;font-size:.88rem;margin:0 0 12px}
+body{background-color:var(--bg);background-image:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22160%22 height=%22160%22 viewBox=%220 0 160 160%22%3E%3Cg transform=%22translate%2818 40%29 rotate%28-28 62 40%29 scale%28.62%29%22%3E%3Cg fill=%22%238a93a3%22 fill-opacity=%220.10%22%3E%3Crect x=%2240%22 y=%2246%22 width=%22120%22 height=%228%22 rx=%223%22/%3E%3Crect x=%2226%22 y=%2230%22 width=%2214%22 height=%2240%22 rx=%224%22/%3E%3Crect x=%2210%22 y=%2238%22 width=%2212%22 height=%2224%22 rx=%223%22/%3E%3Crect x=%22160%22 y=%2230%22 width=%2214%22 height=%2240%22 rx=%224%22/%3E%3Crect x=%22178%22 y=%2238%22 width=%2212%22 height=%2224%22 rx=%223%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");background-size:160px 160px}
+.hero{position:relative;overflow:hidden;border-radius:20px;padding:26px 22px 22px;margin:4px 0 14px;color:#fff;background:linear-gradient(135deg,#15181e 0%,#262a33 55%,#4a1a1d 130%)}
+.hero svg{position:absolute;right:-30px;top:-6px;width:260px;height:130px;transform:rotate(-14deg);opacity:.16}
+.hero .k{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;opacity:.7;margin:0 0 8px;position:relative}
+.hero h1{font-size:1.55rem;margin:0 0 6px;position:relative;line-height:1.2}
+.hero .sub{color:#d5d9e0;margin:0;position:relative;font-size:.95rem}
+.hero .sub strong{color:#fff}
+.hint{font-size:.85rem;padding:10px 12px;margin:0 0 12px}
+.ex{border-left:3px solid var(--accent);padding:12px 14px}
+.ex b{font-size:1rem}
+.ex p{font-size:.86rem;margin:3px 0 8px}
+.go{display:inline-block;background:transparent;color:var(--accent);border:1px solid var(--accent);padding:6px 12px;border-radius:999px;font-size:.8rem;font-weight:600}
+.timer{display:flex;align-items:center;justify-content:space-between;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:8px 10px 8px 14px;margin-bottom:8px}
+.timer .t{font-variant-numeric:tabular-nums;font-weight:700;font-size:1.1rem}
+.timer .l{font-size:.78rem;color:var(--muted);display:block;font-weight:500}
+.tbtn{border:0;border-radius:10px;padding:10px 16px;font-weight:700;font-size:.9rem;background:var(--accent);color:#fff}
+.tbtn.out{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+.timer.run{border-color:var(--accent)}
+.timer.fin{border-color:#2e9e5b}
+.top{display:flex;gap:12px;align-items:center;cursor:pointer}
+.top input{width:22px;height:22px;flex:0 0 auto;accent-color:var(--accent);margin:0}
+.ind{margin-left:34px}
+.ex p.ind{margin-top:4px}
+.ex.done .top b{text-decoration:line-through;opacity:.5}
+.ex.done{opacity:.78}
+.prog{color:var(--muted);font-size:.8rem;margin:-6px 0 10px}
+.fb{margin-top:26px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px}
+.fb h2{margin:0 0 4px}
+.fb p{margin:0 0 10px;color:var(--muted);font-size:.9rem}
+.fb textarea{width:100%;min-height:110px;padding:10px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--text);font:inherit;font-size:.92rem;resize:vertical}
+.fb .acts{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+.fb a.send{text-decoration:none;display:inline-block}
+.fb a.send.off{opacity:.45;pointer-events:none}
+.fb .ok{font-size:.8rem;color:var(--muted);margin-top:8px}
+.cal h2{margin:6px 0 2px}
+.cal .per{color:var(--muted);font-size:.85rem;margin:0 0 12px}
+.cal .stat{display:flex;gap:10px;margin-bottom:12px}
+.cal .stat div{flex:1;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 12px}
+.cal .stat b{display:block;font-size:1.25rem}
+.cal .stat span{font-size:.75rem;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px}
+.grid .wd{font-size:.62rem;text-align:center;color:var(--muted);text-transform:uppercase;letter-spacing:.03em;padding-bottom:2px}
+.grid .d{aspect-ratio:1/1;border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:.78rem;border:1px solid transparent;position:relative}
+.grid .d.fut{color:var(--muted)}
+.grid .d.today{border-color:var(--accent);font-weight:700}
+.grid .d.ok{background:var(--accent);color:#fff;font-weight:700}
+.grid .d.ok i{font-style:normal;font-size:.6rem;line-height:1;margin-top:1px}
+.hlist{margin:14px 0 0;padding:0;list-style:none}
+.hlist li{background:var(--card);border:1px solid var(--line);border-left:3px solid #2e9e5b;border-radius:12px;padding:10px 12px;margin-bottom:8px;font-size:.9rem}
+.hlist li span{color:var(--muted)}
+.grid .d.test{border:1px dashed var(--muted)}
+.fbi{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;margin-bottom:10px}
+.fbi b{display:block;font-size:.95rem}
+.fbi small{color:var(--muted);font-size:.78rem}
+.fbi div{white-space:pre-wrap;margin-top:6px;font-size:.92rem}
+.empty{color:var(--muted);font-size:.9rem;margin-top:14px}
+footer{text-align:center;color:var(--muted);font-size:.8rem;margin-top:28px}
+</style>
+</head>
+<body>
+<main>
+<header class="hero"><svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg"><g fill="#fff" fill-opacity="1"><rect x="40" y="46" width="120" height="8" rx="3"></rect><rect x="26" y="30" width="14" height="40" rx="4"></rect><rect x="10" y="38" width="12" height="24" rx="3"></rect><rect x="160" y="30" width="14" height="40" rx="4"></rect><rect x="178" y="38" width="12" height="24" rx="3"></rect></g></svg><p class="k">Treinamento de musculação</p><h1>Planejamento de Treinamento</h1><p class="sub">Aluno: <strong>Raphael Ishii Zamataro</strong></p></header>
+<div class="hint">Toque em <strong>▶ Assistir ao vídeo</strong> em cada exercício para ver a demonstração no YouTube.</div>
+<div class="stick"><div id="timer"></div><nav class="tabs" id="tabs"></nav></div>
+<div id="app"><h2>Segunda-feira — Quadríceps, adutores e panturrilhas</h2><div class="ex"><b>Cadeira extensora</b><p>Aquecimento: 1 série de 15 reps com carga baixa. Depois, 3 séries unilaterais de 10 reps + 12 reps bilaterais.</p><a class="go" href="https://youtube.com/shorts/OjlRBt6itcc?is=ajyj9eZ4gP5cChby" target="_blank" rel="noopener">▶ Assistir ao vídeo</a></div><div class="ex"><b>Agachamento Smith</b><p>3 séries de 10 a 12 reps</p><a class="go" href="https://youtube.com/shorts/1oipoiTpbJA?is=gg1pwlGbdYrF8Yww" target="_blank" rel="noopener">▶ Assistir ao vídeo</a></div><div class="ex"><b>Leg press 45°</b><p>4 séries de 10 a 12 reps</p><a class="go" href="https://youtube.com/shorts/NY5fw4Zaofg?is=nR2xU0_GpD4XBVOH" target="_blank" rel="noopener">▶ Assistir ao vídeo</a></div><div class="ex"><b>Afundo</b><p>3 séries de 10 reps por perna. Evitar rotação do joelho para dentro.</p><a class="go" href="https://youtube.com/shorts/a5zYhGUSp-8?is=Q-Qz6p2GwnGNKY0N" target="_blank" rel="noopener">▶ Assistir ao vídeo</a></div><div class="ex"><b>Cadeira adutora</b><p>4 séries de 12 reps, com 2 segundos de pico de contração.</p><a class="go" href="https://youtube.com/shorts/_uJgg6U7WbE?is=K89rA4simbBJpXXx" target="_blank" rel="noopener">▶ Assistir ao vídeo</a></div><div class="ex"><b>Panturrilha em pé na máquina</b><p>3 séries de 12 a 15 reps</p><a class="go" href="https://youtube.com/shorts/o1CyKLbUPAM?is=9wzm00j4h_qBVaP1" target="_blank" rel="noopener">▶ Assistir ao vídeo</a></div><div class="ex"><b>Panturrilha no banco (sóleo)</b><p>3 séries de 12 a 15 reps</p><a class="go" href="https://youtube.com/shorts/91bIKBrR4Wo?is=eMpdfuKMfLNwy2YJ" target="_blank" rel="noopener">▶ Assistir ao vídeo</a></div><h2>Terça-feira — Peitoral e abdômen</h2><div class="ex"><b>Supino reto</b><p>1 série de aquecimento de 15 reps + 3 séries de 10 a 12 reps.</p><a class="go" href="https://youtube.com/shorts/UHa9U-O09_U?is=PYPQXWjttJsqd-DO" target="_blank" rel="noopener">▶ Assistir ao vídeo</a></div><div class="ex"><b>Supino inclinado na máquina</b><p>3 séries de 10 a 12 reps</p><a class="go" href="https://youtube.com/shorts/KK5ZSj22h7s?is=0_SqYFMkLSeEq_0W" target="_blank" rel="noopener">▶ Assistir ao vídeo</a></div><div class="ex"><b>Crucifixo na máquina</b><p>3 séries de 10 reps + 10 flexões de braço.</p><a class="go" href="https://youtube.com/shorts/MENdoLpyj7c?is=060hDoVHM4Qzu9jZ" target="_blank" rel="noopener">▶ Assistir ao vídeo</a></div><div class="ex"><b>Crossover na polia alta</b><p>3 séries de 12 a 15 reps</p><a class="go" href="https://youtube.com/shorts/Zbe2qZIeN9o?is=6w2FW37PrwhI0dxS" target="_blank" rel="noopener">▶ Assistir ao vídeo</a></div><div class="ex"><b>Abdominal prancha</b><p>3 séries de 45 segundos.</p><a class="go" href="https://youtube.com/shorts/uxPlAbWFUDs?is=DucFONsepG4JUx84" target="_blank" rel="noopener">▶ Assistir ao vídeo</a></div><div class="ex"><b>Abdominal supra</b><p>3 séries de 12 a 15 reps</p><a class="go" href="https://youtube.com/shorts/vRDR_MmFHcI?is=RlvnbIiS80kJtVFh" target="_blank" rel="noopener">▶ Assistir ao vídeo</a></div><h2>Quarta-feira — Costas, trapézio e posterior de ombro</h2><div class="ex"><b>Puxada frontal pronada</b><p>1 série de aquecimento de 15 reps + 3 séries de 10 a 12 reps.</p><a class="go" href="https://youtube.com/shorts/_2MfZAj98tk?is=xz876Yi8ca5RWgr5" target="_blank" rel="noopener">▶ Assistir ao vídeo</a></div><div class="ex"><b>Remada baixa (triângulo)</b><p>3 séries de 10 a 12 reps</p><a class="go" href="https://youtube.com/shorts/7lc8Ow4vIwA?is=QXSU6GOh4oAUlFQ8" target="_blank" rel="noopener">▶ Assistir ao vídeo</a></div><div class="ex"><b>Remada articulada na máquina</b><p>3 séries de 10 a 12 reps</p><a class="go" href="https://youtube.com/shorts/r4EmE8I74BQ?is=Mgc9-LzNr-laD7cC" target="_blank" rel="noopener">▶ Assistir ao vídeo</a></div><div class="ex"><b>Remada curvada supinada com barra</b><p>3 séries de 10 a 12 reps</p><a class="go" href="https://youtube.com/shorts/w7j9nPqxTH4?is=1AwI_-PL10D0yDse" target="_blank" rel="noopener">▶ Assistir ao vídeo</a></div><div class="ex"><b>Crucifixo inverso + encolhimento com halteres</b><p>3 séries de 12 reps + 10 reps de encolhimento.</p><a class="go" href="https://youtube.com/shorts/wUT3hmnzq3c?is=gyaQgIvzrflQTMs4" target="_blank" rel="noopener">▶ Assistir ao vídeo</a></div><h2>Quinta-feira — Posterior de coxa e glúteos</h2><div class="ex"><b>Mesa flexora</b><p>1 série de aquecimento de 15 reps + 3 séries de 10 a 12 reps.</p><a class="go" href="https://youtube.com/shorts/IXg1PQ_5gmw?is=iNw0TzsiyWoKd9B6" target="_blank" rel="noopener">▶ Assistir ao vídeo</a></div><div class="ex"><b>Cadeira flexora</b><p>3 séries de 10 reps + 10 segundos de isometria.</p><a class="go" href="https://youtube.com/shorts/T46yKiz8laY?is=-QfI_JNirIYCVdpA" target="_blank" rel="noopener">▶ Assistir ao vídeo</a></div><div class="ex"><b>Stiff com halteres</b><p>3 séries de 10 a 12 reps</p><a class="go" href="https://youtube.com/shorts/SRVkwwXk7I4?is=8XpnH_D_lYyUwwF8" target="_blank" rel="noopener">▶ Assistir ao vídeo</a></div><div class="ex"><b>Elevação pélvica</b><p>3 séries de 10 a 12 reps, com carga moderada a alta.</p><a class="go" href="https://youtube.com/shorts/5_7Wik-lfQs?is=_9O_a73nJeKn6jll" target="_blank" rel="noopener">▶ Assistir ao vídeo</a></div><div class="ex"><b>Cadeira abdutora</b><p>3 séries de 12 a 15 reps</p><a class="go" href="https://youtube.com/shorts/zd06DHpjRmY?is=5FBfFDATVTCYEgiR" target="_blank" rel="noopener">▶ Assistir ao vídeo</a></div><div class="ex"><b>Búlgaro</b><p>3 séries de 10 reps por perna.</p><a class="go" href="https://youtube.com/shorts/0KQOdTvfc5A?is=g6YoQAd6JjTcFzAI" target="_blank" rel="noopener">▶ Assistir ao vídeo</a></div><h2>Sexta-feira — Ombro, bíceps e tríceps</h2><div class="ex"><b>Elevação frontal e lateral alternadas</b><p>3 séries de 10 reps + 10 reps</p><a class="go" href="https://youtube.com/shorts/Ik9Ml3asYhA?is=nnrzXQGvQJCIkrs2" target="_blank" rel="noopener">▶ Assistir ao vídeo</a></div><div class="ex"><b>Rosca direta</b><p>3 séries de 10 a 12 reps</p><a class="go" href="https://youtube.com/shorts/fjS0CqDR4v8?is=EGPY-8Y2JZVbg5mq" target="_blank" rel="noopener">▶ Assistir ao vídeo</a></div><div class="ex"><b>Rosca alternada com halteres</b><p>3 séries de 10 reps por braço</p><a class="go" href="https://youtube.com/shorts/xXp3mV3OOZo?is=b7Q0Qf7LuZMXbwWt" target="_blank" rel="noopener">▶ Assistir ao vídeo</a></div><div class="ex"><b>Rosca martelo na corda</b><p>3 séries de 10 a 12 reps</p><a class="go" href="https://youtube.com/shorts/EdsGRhdAye0?is=b_iBIUvpF5DjMMVc" target="_blank" rel="noopener">▶ Assistir ao vídeo</a></div><div class="ex"><b>Tríceps pulley com barra</b><p>3 séries de 10 a 12 reps</p><a class="go" href="https://youtube.com/shorts/M88Bt4MMpkI?is=vBUCUmepTpp66BIR" target="_blank" rel="noopener">▶ Assistir ao vídeo</a></div><div class="ex"><b>Tríceps francês com halter</b><p>3 séries de 10 a 12 reps</p><a class="go" href="https://youtube.com/shorts/p-OAbXm7cCs?is=-SczhV-iyU7cAES7" target="_blank" rel="noopener">▶ Assistir ao vídeo</a></div><div class="ex"><b>Tríceps corda</b><p>3 séries em drop set de 8 reps, baixando a carga a cada série.</p><a class="go" href="https://youtube.com/shorts/NBDenNTadGs?is=6k0whjOBaMmq7eTW" target="_blank" rel="noopener">▶ Assistir ao vídeo</a></div></div>
+<noscript><p class="hint">Para usar o cronômetro, as caixinhas e o feedback, abra esta página no navegador (Safari ou Chrome) com o JavaScript ativado.</p></noscript>
+<section class="fb" id="fb"></section>
+<footer>Treinamento de musculação • Raphael Ishii Zamataro</footer>
+</main>
+<script type="application/json" id="data">[{"d":"Segunda","f":"Quadríceps, adutores e panturrilhas","e":[["Cadeira extensora","Aquecimento: 1 série de 15 reps com carga baixa. Depois, 3 séries unilaterais de 10 reps + 12 reps bilaterais.","https://youtube.com/shorts/OjlRBt6itcc?is=ajyj9eZ4gP5cChby"],["Agachamento Smith","3 séries de 10 a 12 reps","https://youtube.com/shorts/1oipoiTpbJA?is=gg1pwlGbdYrF8Yww"],["Leg press 45°","4 séries de 10 a 12 reps","https://youtube.com/shorts/NY5fw4Zaofg?is=nR2xU0_GpD4XBVOH"],["Afundo","3 séries de 10 reps por perna. Evitar rotação do joelho para dentro.","https://youtube.com/shorts/a5zYhGUSp-8?is=Q-Qz6p2GwnGNKY0N"],["Cadeira adutora","4 séries de 12 reps, com 2 segundos de pico de contração.","https://youtube.com/shorts/_uJgg6U7WbE?is=K89rA4simbBJpXXx"],["Panturrilha em pé na máquina","3 séries de 12 a 15 reps","https://youtube.com/shorts/o1CyKLbUPAM?is=9wzm00j4h_qBVaP1"],["Panturrilha no banco (sóleo)","3 séries de 12 a 15 reps","https://youtube.com/shorts/91bIKBrR4Wo?is=eMpdfuKMfLNwy2YJ"]]},{"d":"Terça","f":"Peitoral e abdômen","e":[["Supino reto","1 série de aquecimento de 15 reps + 3 séries de 10 a 12 reps.","https://youtube.com/shorts/UHa9U-O09_U?is=PYPQXWjttJsqd-DO"],["Supino inclinado na máquina","3 séries de 10 a 12 reps","https://youtube.com/shorts/KK5ZSj22h7s?is=0_SqYFMkLSeEq_0W"],["Crucifixo na máquina","3 séries de 10 reps + 10 flexões de braço.","https://youtube.com/shorts/MENdoLpyj7c?is=060hDoVHM4Qzu9jZ"],["Crossover na polia alta","3 séries de 12 a 15 reps","https://youtube.com/shorts/Zbe2qZIeN9o?is=6w2FW37PrwhI0dxS"],["Abdominal prancha","3 séries de 45 segundos.","https://youtube.com/shorts/uxPlAbWFUDs?is=DucFONsepG4JUx84"],["Abdominal supra","3 séries de 12 a 15 reps","https://youtube.com/shorts/vRDR_MmFHcI?is=RlvnbIiS80kJtVFh"]]},{"d":"Quarta","f":"Costas, trapézio e posterior de ombro","e":[["Puxada frontal pronada","1 série de aquecimento de 15 reps + 3 séries de 10 a 12 reps.","https://youtube.com/shorts/_2MfZAj98tk?is=xz876Yi8ca5RWgr5"],["Remada baixa (triângulo)","3 séries de 10 a 12 reps","https://youtube.com/shorts/7lc8Ow4vIwA?is=QXSU6GOh4oAUlFQ8"],["Remada articulada na máquina","3 séries de 10 a 12 reps","https://youtube.com/shorts/r4EmE8I74BQ?is=Mgc9-LzNr-laD7cC"],["Remada curvada supinada com barra","3 séries de 10 a 12 reps","https://youtube.com/shorts/w7j9nPqxTH4?is=1AwI_-PL10D0yDse"],["Crucifixo inverso + encolhimento com halteres","3 séries de 12 reps + 10 reps de encolhimento.","https://youtube.com/shorts/wUT3hmnzq3c?is=gyaQgIvzrflQTMs4"]]},{"d":"Quinta","f":"Posterior de coxa e glúteos","e":[["Mesa flexora","1 série de aquecimento de 15 reps + 3 séries de 10 a 12 reps.","https://youtube.com/shorts/IXg1PQ_5gmw?is=iNw0TzsiyWoKd9B6"],["Cadeira flexora","3 séries de 10 reps + 10 segundos de isometria.","https://youtube.com/shorts/T46yKiz8laY?is=-QfI_JNirIYCVdpA"],["Stiff com halteres","3 séries de 10 a 12 reps","https://youtube.com/shorts/SRVkwwXk7I4?is=8XpnH_D_lYyUwwF8"],["Elevação pélvica","3 séries de 10 a 12 reps, com carga moderada a alta.","https://youtube.com/shorts/5_7Wik-lfQs?is=_9O_a73nJeKn6jll"],["Cadeira abdutora","3 séries de 12 a 15 reps","https://youtube.com/shorts/zd06DHpjRmY?is=5FBfFDATVTCYEgiR"],["Búlgaro","3 séries de 10 reps por perna.","https://youtube.com/shorts/0KQOdTvfc5A?is=g6YoQAd6JjTcFzAI"]]},{"d":"Sexta","f":"Ombro, bíceps e tríceps","e":[["Elevação frontal e lateral alternadas","3 séries de 10 reps + 10 reps","https://youtube.com/shorts/Ik9Ml3asYhA?is=nnrzXQGvQJCIkrs2"],["Rosca direta","3 séries de 10 a 12 reps","https://youtube.com/shorts/fjS0CqDR4v8?is=EGPY-8Y2JZVbg5mq"],["Rosca alternada com halteres","3 séries de 10 reps por braço","https://youtube.com/shorts/xXp3mV3OOZo?is=b7Q0Qf7LuZMXbwWt"],["Rosca martelo na corda","3 séries de 10 a 12 reps","https://youtube.com/shorts/EdsGRhdAye0?is=b_iBIUvpF5DjMMVc"],["Tríceps pulley com barra","3 séries de 10 a 12 reps","https://youtube.com/shorts/M88Bt4MMpkI?is=vBUCUmepTpp66BIR"],["Tríceps francês com halter","3 séries de 10 a 12 reps","https://youtube.com/shorts/p-OAbXm7cCs?is=-SczhV-iyU7cAES7"],["Tríceps corda","3 séries em drop set de 8 reps, baixando a carga a cada série.","https://youtube.com/shorts/NBDenNTadGs?is=6k0whjOBaMmq7eTW"]]}]</script>
+<script>
+var SRC="<!DOCTYPE html>\n"+document.documentElement.outerHTML;
+var D=JSON.parse(document.getElementById("data").textContent);
+var tabs=document.getElementById("tabs"),app=document.getElementById("app");
+var owner=false,art=null,cur=0,editing=null,busy=false,msg="";
+function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/"/g,"&quot;")}
+function save(){
+  if(!art||busy)return;busy=true;
+  var json=JSON.stringify(D).replace(/</g,"\\u003c");
+  var html=SRC.replace(/(<script type="application\/json" id="data">)[\s\S]*?(<\/script>)/,function(m,a,b){return a+json+b});
+  art.publish(html).catch(function(e){busy=false;if(e&&e.code!=="conflict"){msg="Não foi possível salvar. Tente de novo.";show(cur)}});
+}
+function setLink(i,j,val){
+  val=(val||"").trim();
+  if(val===""){D[i].e[j][2]=null}
+  else{
+    if(!/^https:\/\//i.test(val)){msg="O link precisa começar com https://";show(cur);return}
+    D[i].e[j][2]=val;
+  }
+  msg="";editing=null;show(cur);save();
+}
+function LSget(k){try{return localStorage.getItem(k)}catch(e){return null}}
+function LSset(k,v){try{if(v===null)localStorage.removeItem(k);else localStorage.setItem(k,v)}catch(e){}}
+function getChecks(){try{return JSON.parse(LSget("t.checks")||"{}")}catch(e){return {}}}
+function countDone(i){var c=getChecks(),n=0;D[i].e.forEach(function(e,j){if(c[i+"-"+j])n++});return n}
+function show(i){
+  if(i===D.length){showCal();return}
+  cur=i;renderFB();var x=D[i],checks=getChecks();
+  [].forEach.call(tabs.children,function(b,j){b.className=j===i?"on":""});
+  var h=owner?'<div class="bar">Modo editor: cole o link do vídeo no campo do exercício e toque em Salvar. Só você vê isso.</div>':"";
+  h+='<h2>'+x.d+'-feira</h2><p class="focus">'+esc(x.f)+'</p><p class="prog" id="prog"></p>';
+  x.e.forEach(function(e,j){
+    var key=i+"-"+j;
+    h+='<div class="ex'+(checks[key]?' done':'')+'"><label class="top"><input type="checkbox" data-chk="'+key+'"'+(checks[key]?' checked':'')+'><b>'+esc(e[0])+'</b></label><p class="ind">'+esc(e[1])+'</p><div class="ind">';
+    if(e[2]&&/^https:\/\//i.test(e[2])){
+      h+='<a class="go" href="'+esc(e[2])+'" target="_blank" rel="noopener">▶ Assistir ao vídeo</a>';
+      if(owner&&editing!==key)h+=' <button class="alt" data-edit="'+key+'">Alterar link</button>';
+    }else if(!owner){h+='<span class="soon">Vídeo em breve</span>'}
+    if(owner&&(!e[2]||editing===key)){
+      h+='<div class="own"><div class="row"><input type="url" inputmode="url" placeholder="Cole o link do YouTube aqui" value="'+esc(e[2]||"")+'" id="in-'+key+'"><button data-save="'+key+'">Salvar</button></div></div>';
+    }
+    h+='</div></div>';
+  });
+  if(msg)h+='<div class="msg">'+esc(msg)+'</div>';
+  app.innerHTML=h;
+  updProg();
+  [].forEach.call(app.querySelectorAll("[data-save]"),function(b){b.onclick=function(){var k=b.getAttribute("data-save").split("-");setLink(+k[0],+k[1],document.getElementById("in-"+k.join("-")).value)}});
+  [].forEach.call(app.querySelectorAll("[data-edit]"),function(b){b.onclick=function(){editing=b.getAttribute("data-edit");msg="";show(cur)}});
+  [].forEach.call(app.querySelectorAll("[data-chk]"),function(c){c.onchange=function(){
+    var k=c.getAttribute("data-chk"),all=getChecks();
+    if(c.checked)all[k]=1;else delete all[k];
+    LSset("t.checks",JSON.stringify(all));
+    c.closest(".ex").className="ex"+(c.checked?" done":"");
+    updProg();updWA();
+  }});
+  try{history.replaceState(null,"","#"+x.d.toLowerCase())}catch(err){}
+}
+function updProg(){var p=document.getElementById("prog");if(p)p.textContent=countDone(cur)+" de "+D[cur].e.length+" exercícios feitos"}
+
+/* ---- frequência ---- */
+function dkey(d){return d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate())}
+function getHist(){try{return JSON.parse(LSget("t.hist")||"{}")}catch(e){return {}}}
+function recordSession(st,en){
+  if(!st||!en||LSget("t.rec")===String(en))return;
+  var h=getHist(),k=dkey(new Date(st));
+  h[k]=(h[k]||0)+(en-st);
+  LSset("t.hist",JSON.stringify(h));LSset("t.rec",String(en));
+}
+var START=new Date(2026,10,24); /* 24/11/2026 */
+function cycle(){
+  var now=new Date(),today=new Date(now.getFullYear(),now.getMonth(),now.getDate()),k=0;
+  if(today>=START){k=(today.getFullYear()-START.getFullYear())*12+(today.getMonth()-START.getMonth());if(today.getDate()<24)k--;}
+  var a=new Date(2026,10+k,24),b=new Date(2026,11+k,24);
+  return {a:a,b:b,today:today};
+}
+var MES=["jan","fev","mar","abr","mai","jun","jul","ago","set","out","nov","dez"];
+function dm(d){return pad(d.getDate())+"/"+pad(d.getMonth()+1)}
+function showCal(){
+  cur=D.length;
+  [].forEach.call(tabs.children,function(b,j){b.className=j===D.length?"on":""});
+  fb.style.display="none";
+  var c=cycle(),h=getHist(),last=new Date(c.b.getFullYear(),c.b.getMonth(),c.b.getDate()-1),days=[],pre=false,d=new Date(pre?c.today:c.a),n=0,tot=0,list=[];
+  while(d<c.b){days.push(new Date(d));d.setDate(d.getDate()+1)}
+  days.forEach(function(x){var k=dkey(x);if(h[k]){n++;tot+=h[k];list.push([x,h[k]])}});
+  var html='<div class="cal"><h2>Frequência de treino</h2><p class="per">Ciclo de '+dm(c.a)+' a '+dm(last)+'. No dia '+dm(c.b)+' começa um novo calendário.</p>';
+  if(pre)html+='<p class="per">Hoje (teste) aparece tracejado e será apagado automaticamente a partir de '+dm(START)+'.</p>';
+  html+='<div class="stat"><div><b>'+n+'</b><span>treinos no ciclo</span></div><div><b>'+(n?fmt(Math.round(tot/n)):"–")+'</b><span>tempo médio</span></div></div>';
+  html+='<div class="grid">';
+  ["Seg","Ter","Qua","Qui","Sex","Sáb","Dom"].forEach(function(w){html+='<div class="wd">'+w+'</div>'});
+  var lead=(days[0].getDay()+6)%7;for(var i=0;i<lead;i++)html+='<div></div>';
+  days.forEach(function(x){
+    var k=dkey(x),cls="d"+(x<START?" test":"")+(x>c.today?" fut":"")+(x.getTime()===c.today.getTime()?" today":"")+(h[k]?" ok":"");
+    html+='<div class="'+cls+'">'+x.getDate()+(h[k]?'<i>✓</i>':'')+'</div>';
+  });
+  html+='</div>';
+  if(list.length){
+    html+='<ul class="hlist">';
+    list.slice().reverse().forEach(function(it){html+='<li>Treino do dia '+pad(it[0].getDate())+' finalizado <span>· '+fmt(it[1])+(it[0]<START?' (teste)':'')+'</span></li>'});
+    html+='</ul>';
+  }else html+='<p class="empty">Nenhum treino finalizado neste ciclo ainda. Ao tocar em “Finalizar treino”, o dia aparece aqui com o tempo.</p>';
+  html+='</div>';
+  app.innerHTML=html;
+  try{history.replaceState(null,"","#frequencia")}catch(err){}
+}
+
+function twoTap(btn,txt,fn){var o=btn.textContent;btn.onclick=function(){if(btn.getAttribute("data-arm")){fn();return}btn.setAttribute("data-arm","1");btn.textContent=txt;setTimeout(function(){btn.removeAttribute("data-arm");btn.textContent=o},4000)}}
+/* ---- cronômetro ---- */
+var tEl=document.getElementById("timer"),tick=null;
+function pad(n){return (n<10?"0":"")+n}
+function fmt(ms){var s=Math.max(0,Math.floor(ms/1000)),h=Math.floor(s/3600),m=Math.floor(s%3600/60);return (h?pad(h)+":":"")+pad(m)+":"+pad(s%60)}
+function tState(){var st=+LSget("t.start")||0,en=+LSget("t.end")||0;return {st:st,en:en}}
+function renderTimer(){
+  var t=tState();
+  if(tick){clearInterval(tick);tick=null}
+  if(!t.st){
+    tEl.innerHTML='<div class="timer"><div><span class="l">Cronômetro do treino</span><span class="t">00:00</span></div><button class="tbtn" id="tgo">▶ Iniciar treino</button></div>';
+    document.getElementById("tgo").onclick=function(){LSset("t.start",String(Date.now()));LSset("t.end",null);renderTimer();updWA()};
+  }else if(!t.en){
+    tEl.innerHTML='<div class="timer run"><div><span class="l">Treino em andamento</span><span class="t" id="tv">'+fmt(Date.now()-t.st)+'</span></div><button class="tbtn" id="tend">Finalizar treino</button></div>';
+    tick=setInterval(function(){var v=document.getElementById("tv");if(v)v.textContent=fmt(Date.now()-t.st)},1000);
+    twoTap(document.getElementById("tend"),"Toque de novo para finalizar",function(){var en=Date.now();LSset("t.end",String(en));recordSession(t.st,en);renderTimer();if(cur===D.length)showCal()});
+  }else{
+    tEl.innerHTML='<div class="timer fin"><div><span class="l">Treino finalizado ✓</span><span class="t">'+fmt(t.en-t.st)+'</span></div><button class="tbtn out" id="tnew">Novo treino</button></div>';
+    twoTap(document.getElementById("tnew"),"Toque de novo: limpa as marcações",function(){LSset("t.start",null);LSset("t.end",null);LSset("t.checks",null);renderTimer();show(cur)});
+  }
+}
+
+/* ---- feedback ---- */
+var FEEDBACK_EMAIL="gcarmo917@gmail.com";
+var NOME="Raphael Ishii Zamataro",DK=["seg","ter","qua","qui","sex"],dbx=null,uid=null,isAdmin=false;
+var fb=document.getElementById("fb");
+function updWA(){}
+function fdt(ms){var d=new Date(ms);return pad(d.getDate())+"/"+pad(d.getMonth()+1)+" às "+pad(d.getHours())+":"+pad(d.getMinutes())}
+function renderFB(){
+  if(cur>=D.length){fb.style.display="none";return}
+  var k=DK[cur],dia=D[cur].d.toLowerCase()+"-feira",sent=+LSget("t.fbs."+k)||0;
+  fb.style.display="";
+  fb.innerHTML='<h2>Feedback de '+dia+'</h2><p>Deixe seu feedback ou dúvidas para o seu professor sobre o treino de '+dia+'.</p><textarea id="fbt" placeholder="Como foi o treino? Alguma dúvida sobre os exercícios?"></textarea><div class="acts"><button class="tbtn" id="fbsend">Enviar ao professor</button></div><div class="ok" id="fbok"></div>';
+  var ta=document.getElementById("fbt"),ok=document.getElementById("fbok");
+  ta.value=LSget("t.fb."+k)||"";
+  ta.oninput=function(){LSset("t.fb."+k,ta.value)};
+  if(sent)ok.textContent="Enviado em "+fdt(sent)+" ✓ (você pode editar e enviar de novo)";
+  document.getElementById("fbsend").onclick=function(){
+    var txt=ta.value.trim();
+    if(!txt){ok.textContent="Escreva seu feedback antes de enviar.";return}
+    if(FEEDBACK_EMAIL.indexOf("@")<0){ok.textContent="Envio ainda não configurado.";return}
+    ok.textContent="Enviando…";
+    var t=tState(),c=getChecks(),n=0;D[cur].e.forEach(function(e,j){if(c[cur+"-"+j])n++});
+    var body={_subject:"Feedback – "+NOME+" – "+dia,_template:"table",aluno:NOME,dia:dia,mensagem:txt,exercicios_marcados:n+" de "+D[cur].e.length};
+    if(t.st&&t.en)body.tempo_de_treino=fmt(t.en-t.st);
+    fetch("https://formsubmit.co/ajax/"+encodeURIComponent(FEEDBACK_EMAIL),{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},body:JSON.stringify(body)})
+      .then(function(r){if(!r.ok)throw new Error("x");return r.json()})
+      .then(function(){var now=Date.now();LSset("t.fbs."+k,String(now));ok.textContent="Enviado em "+fdt(now)+" ✓"})
+      .catch(function(){ok.textContent="Não foi possível enviar agora. Seu texto continua salvo; tente de novo."});
+  };
+}
+function initDB(){}
+D.forEach(function(x,i){var b=document.createElement("button");b.textContent=x.d;b.onclick=function(){editing=null;msg="";show(i)};tabs.appendChild(b)});
+var fq=document.createElement("button");fq.textContent="📅 Frequência";fq.onclick=function(){editing=null;msg="";show(D.length)};tabs.appendChild(fq);
+var hh=(location.hash||"").slice(1),s=0;D.forEach(function(x,i){if(x.d.toLowerCase()===hh)s=i});if(hh==="frequencia")s=D.length;
+(function(){var td=new Date(),t=new Date(td.getFullYear(),td.getMonth(),td.getDate());if(t>=START){var h=getHist(),ch=false,lim=dkey(START);for(var k in h){if(k<lim){delete h[k];ch=true}}if(ch)LSset("t.hist",JSON.stringify(h))}})();
+var t0=tState();if(t0.st&&t0.en)recordSession(t0.st,t0.en);
+show(s);renderTimer();initDB();
+</script></body></html>
